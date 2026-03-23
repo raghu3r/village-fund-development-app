@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# environment secrets — never commit!
+.env
+.env.local
+.env.*.local
+scripts/serviceAccountKey.json
+
+# logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

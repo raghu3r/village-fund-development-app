@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Only signed-in users can read any data
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Admin check — anyone whose member doc has a role containing "Admin"
+    function isAdmin() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/members/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/members/$(request.auth.uid)).data.role.matches('.*Admin.*');
+    }
+
+    // Members collection — read by all signed-in, write by admin only
+    match /members/{memberId} {
+      allow read:  if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Payments — read by all signed-in, write by admin only
+    match /payments/{monthId} {
+      allow read:  if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Plans — read by all signed-in, write by admin only
+    match /plans/{planId} {
+      allow read:  if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Announcements — read by all signed-in, write by admin only
+    match /announcements/{annId} {
+      allow read:  if isSignedIn();
+      allow write: if isAdmin();
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "moolam-5723f"
+  },
+  "targets": {
+    "moolam-5723f": {
+      "hosting": {
+        "reddys-moolam": [
+          "reddys-moolam"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
