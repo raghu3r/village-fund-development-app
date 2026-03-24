@@ -87,9 +87,8 @@ firebase deploy --only hosting
 
 ### STEP 8 — Share with Members
 Send each member:
-- App link: `https://moolam.web.app`
-- Their email (e.g. ravi@moolam.app)
-- Their password (privately, via WhatsApp)
+- App link: `https://reddys-moolam.web.app`
+- Their email & password (privately, via WhatsApp)
 
 ---
 
@@ -110,24 +109,6 @@ Send each member:
 ---
 
 ## 👥 Member Login Credentials
-
-| Member | Email | Default Password |
-|---|---|---|
-| Ravi Kumar (Admin) | ravi@moolam.app | Sabh@1234 |
-| Suresh Reddy | suresh@moolam.app | Sabh@2222 |
-| Lakshmi Devi | lakshmi@moolam.app | Sabh@3333 |
-| Venkat Rao | venkat@moolam.app | Sabh@4444 |
-| Anitha Goud | anitha@moolam.app | Sabh@5555 |
-| Prasad Naidu | prasad@moolam.app | Sabh@6666 |
-| Kavitha Sharma | kavitha@moolam.app | Sabh@7777 |
-| Mohan Das | mohan@moolam.app | Sabh@8888 |
-| Sridevi Patil | sridevi@moolam.app | Sabh@9999 |
-| Ramesh Yadav | ramesh@moolam.app | Sabh@1111 |
-| Uma Shankar | uma@moolam.app | Sabh@1122 |
-| Deepa Varma | deepa@moolam.app | Sabh@1133 |
-| Kiran Kumar | kiran@moolam.app | Sabh@1144 |
-| Sunitha Babu | sunitha@moolam.app | Sabh@1155 |
-| Arjun Reddy | arjun@moolam.app | Sabh@1166 |
 
 > ⚠️ Share passwords privately (one by one on WhatsApp).
 > Ask each member to change their password after first login.
