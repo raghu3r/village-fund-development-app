@@ -46,12 +46,12 @@ const MEMBERS = [
 
 // ── Initial plans ─────────────────────────────────────────────────────────────
 const INITIAL_PLANS = [
-  { name: 'Village Borewells',      icon: '💧', desc: 'Drill 2 borewells for clean drinking water supply to all households.', status: 'ongoing', budget: 45000, category: 'Water'          },
-  { name: 'Street Lights (Solar)',  icon: '💡', desc: 'Install solar-powered LED street lights on main road and 3 lanes.',    status: 'planned', budget: 30000, category: 'Infrastructure' },
-  { name: 'Youth Sports Ground',    icon: '⚽', desc: 'Level the vacant land near temple and create a basic sports ground.',  status: 'planned', budget: 25000, category: 'Youth'          },
+  // { name: 'Village Borewells',      icon: '💧', desc: 'Drill 2 borewells for clean drinking water supply to all households.', status: 'planned', budget: TBD, category: 'Water'          },
+  // { name: 'Street Lights (Solar)',  icon: '💡', desc: 'Install solar-powered LED street lights on main road and 3 lanes.',    status: 'planned', budget: 30000, category: 'Infrastructure' },
+  // { name: 'Youth Sports Ground',    icon: '⚽', desc: 'Level the vacant land near temple and create a basic sports ground.',  status: 'planned', budget: 25000, category: 'Youth'          },
   { name: 'Village Library Corner', icon: '📚', desc: 'Set up a small reading corner with books and digital access.',         status: 'planned', budget: 15000, category: 'Education'      },
-  { name: 'Ganesha Temple Repair',  icon: '🛕', desc: 'Repair and whitewash the old Ganesha temple walls and entrance.',      status: 'done',    budget: 18000, category: 'Culture'        },
-  { name: 'Monthly Sanitation Drive', icon: '🧹', desc: 'Monthly cleanliness drive and waste-management awareness.',          status: 'ongoing', budget: 8000,  category: 'Health'         },
+  { name: 'Chinta chettu arugu Repair',  icon: '🛕', desc: 'Repair and whitewash the old arugu',      status: 'planned',    budget: 1000, category: 'Culture'        },
+  // { name: 'Monthly Sanitation Drive', icon: '🧹', desc: 'Monthly cleanliness drive and waste-management awareness.',          status: 'ongoing', budget: 8000,  category: 'Health'         },
 ];
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -109,8 +109,8 @@ async function main() {
   console.log('\n📢  Seeding welcome announcement…');
   await db.collection('announcements').add({
     title:     'Welcome to Gram Sabha Fund! 🎉',
-    body:      'All 15 members have successfully joined. We will start collecting ₹1,000/month from April 2026. Check the Funds tab to track contributions and the Plans tab to see our development roadmap. — Ravi Kumar (Admin)',
-    author:    'Ravi Kumar',
+    body:      'All members have successfully joined. We will start collecting ₹1,000/month from April 2026. Check the Funds tab to track contributions and the Plans tab to see our development roadmap.',
+    author:    'RaghuRam Reddy',
     createdAt: Timestamp.now(),
   });
 
