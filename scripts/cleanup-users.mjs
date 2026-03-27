@@ -25,6 +25,7 @@ const KEEP_EMAILS = [
   'challasarvesh7@gmail.com',
   'sivaram4@gmail.com',
   'challaraghuram45@gmail.com',
+  'yogi.challa@gmail.com',       // Yughandar Reddy (Admin)
 ];
 // ─────────────────────────────────────────────────────────
 

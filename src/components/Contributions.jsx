@@ -98,30 +98,58 @@ export default function Contributions({ showToast }) {
       {/* MEMBER LIST */}
       <div className="card">
         <div className="card-title">
-          {isAdmin ? 'Tap member to toggle payment status' : 'Member Payment Status'}
+          {isAdmin ? 'Mark members as paid' : 'Member Payment Status'}
         </div>
         {members.map(m => (
           <div
             key={m.id}
             className="contrib-row"
-            onClick={() => togglePayment(m.id)}
-            style={{ cursor: isAdmin ? 'pointer' : 'default', opacity: saving === m.id ? 0.5 : 1 }}
+            style={{ opacity: saving === m.id ? 0.5 : 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
           >
-            <div className="c-av">{m.initials}</div>
-            <div className="c-name">
-              <div className="c-name-main">{m.name}{m.id === profile?.id ? ' (You)' : ''}</div>
-              <div className="c-name-role">{m.role}</div>
+            <div style={{ display: 'flex', alignItems: 'center', flex: 1, gap: 12 }}>
+              <div className="c-av">{m.initials}</div>
+              <div className="c-name">
+                <div className="c-name-main">{m.name}{m.id === profile?.id ? ' (You)' : ''}</div>
+                <div className="c-name-role">{m.role}</div>
+              </div>
             </div>
-            <span className={`c-status ${monthData[m.id] ? 'c-paid' : 'c-pending'}`}>
-              {saving === m.id ? '…' : monthData[m.id] ? '✓ Paid' : 'Pending'}
-            </span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span className={`c-status ${monthData[m.id] ? 'c-paid' : 'c-pending'}`}>
+                {saving === m.id ? '…' : monthData[m.id] ? '✓ Paid' : 'Pending'}
+              </span>
+              {isAdmin && (
+                <button
+                  onClick={() => togglePayment(m.id)}
+                  disabled={saving === m.id}
+                  style={{
+                    fontSize: 12,
+                    padding: '6px 12px',
+                    minWidth: 'auto',
+                    background: monthData[m.id] ? '#e85d5d' : 'var(--saffron)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: saving === m.id ? 'default' : 'pointer',
+                    fontWeight: 600,
+                    transition: 'opacity 0.2s',
+                    whiteSpace: 'nowrap',
+                    opacity: saving === m.id ? 0.6 : 1,
+                  }}
+                  onMouseEnter={(e) => !saving && (e.target.style.opacity = '0.85')}
+                  onMouseLeave={(e) => !saving && (e.target.style.opacity = '1')}
+                  title={monthData[m.id] ? 'Mark as not paid' : 'Mark as paid'}
+                >
+                  {monthData[m.id] ? 'Unmark' : 'Mark Paid'}
+                </button>
+              )}
+            </div>
           </div>
         ))}
       </div>
 
       {isAdmin && (
         <p style={{ textAlign: 'center', fontSize: 11, color: 'var(--text-light)', marginTop: 4 }}>
-          ★ Admin: Tap any member to mark / unmark payment
+          ★ Admin: Tap button to mark / unmark payment
         </p>
       )}
     </div>

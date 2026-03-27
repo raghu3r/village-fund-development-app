@@ -42,6 +42,7 @@ const MEMBERS = [
   { name: 'Sarvesh Reddy',     email: 'challasarvesh7@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'SR' },
   { name: 'Sivaram Reddy',     email: 'sivaram4@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'SRR' },
   { name: 'Chinnu',     email: 'challaraghuram45@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'CRR' },
+  { name: 'Yughandar Reddy',     email: 'yogi.challa@gmail.com',  password: 'Moolam@1234',  role: 'Admin / Treasurer',            initials: 'YR' },
 ];
 
 // ── Initial plans ─────────────────────────────────────────────────────────────

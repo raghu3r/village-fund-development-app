@@ -109,8 +109,6 @@ export default function Plans({ showToast }) {
                   <div
                     key={p.id}
                     className="plan-item"
-                    onClick={() => cycleStatus(p)}
-                    style={{ cursor: isAdmin ? 'pointer' : 'default' }}
                   >
                     <div className={`plan-icon plan-${p.status}`}>{p.icon}</div>
                     <div style={{ flex: 1 }}>
@@ -122,6 +120,32 @@ export default function Plans({ showToast }) {
                         {p.category && <span className="badge b-cat">{p.category}</span>}
                       </div>
                     </div>
+                    {isAdmin && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          cycleStatus(p);
+                        }}
+                        style={{
+                          fontSize: 12,
+                          padding: '6px 12px',
+                          minWidth: 'auto',
+                          background: 'var(--saffron)',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                          fontWeight: 600,
+                          transition: 'opacity 0.2s',
+                          whiteSpace: 'nowrap',
+                        }}
+                        onMouseEnter={(e) => e.target.style.opacity = '0.85'}
+                        onMouseLeave={(e) => e.target.style.opacity = '1'}
+                        title={`Mark as ${p.status === 'planned' ? 'In Progress' : p.status === 'ongoing' ? 'Completed' : 'Incomplete'}`}
+                      >
+                        {p.status === 'planned' ? 'Mark it Inprogress' : p.status === 'ongoing' ? 'Mark it Completed' : 'Mark it Incomplete'}
+                      </button>
+                    )}
                   </div>
                 ))
             }
@@ -133,7 +157,7 @@ export default function Plans({ showToast }) {
         <>
           <button className="fab" onClick={() => setShowAdd(true)} title="Add plan">＋</button>
           <p style={{ textAlign: 'center', fontSize: 11, color: 'var(--text-light)', marginTop: 6 }}>
-            ★ Tap a plan card to advance its status
+            ★ Click button to advance plan status
           </p>
         </>
       )}
