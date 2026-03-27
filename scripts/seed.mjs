@@ -51,7 +51,7 @@ const INITIAL_PLANS = [
   // { name: 'Street Lights (Solar)',  icon: '💡', desc: 'Install solar-powered LED street lights on main road and 3 lanes.',    status: 'planned', budget: 30000, category: 'Infrastructure' },
   // { name: 'Youth Sports Ground',    icon: '⚽', desc: 'Level the vacant land near temple and create a basic sports ground.',  status: 'planned', budget: 25000, category: 'Youth'          },
   { name: 'Village Library Corner', icon: '📚', desc: 'Set up a small reading corner with books and digital access.',         status: 'planned', budget: 15000, category: 'Education'      },
-  { name: 'Chinta chettu arugu Repair',  icon: '🛕', desc: 'Repair and whitewash the old arugu',      status: 'planned',    budget: 1000, category: 'Culture'        },
+  { name: 'Chinta chettu arugu Repair',  icon: '🛕', desc: 'Repair and whitewash the old arugu',      status: 'planned',    budget: 10000, category: 'Culture'        },
   // { name: 'Monthly Sanitation Drive', icon: '🧹', desc: 'Monthly cleanliness drive and waste-management awareness.',          status: 'ongoing', budget: 8000,  category: 'Health'         },
 ];
 
