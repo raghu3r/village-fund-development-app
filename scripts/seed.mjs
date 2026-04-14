@@ -36,13 +36,13 @@ const db        = getFirestore();
 
 // ── Member definitions ────────────────────────────────────────────────────────
 const MEMBERS = [
-  { name: 'Raghu Ram Reddy T',     email: 'trrr.1993@gmail.com', password: 'Moolam@1234',   role: 'Admin / Treasurer', initials: 'RRR' },
-  { name: 'Chaitanya Kumar Reddy',   email: 'tckr.1990@gmail.com', password: 'Moolam@1234',  role: 'Member',            initials: 'CKR' },
+  { name: 'Raghu Ram Reddy T',     email: 'trrr.1993@gmail.com', password: 'Moolam@1234',   role: 'Member', initials: 'RRR' },
+  { name: 'Chaitanya Kumar Reddy',   email: 'tckr.1990@gmail.com', password: 'Moolam@1234',  role: 'Admin / Treasurer',            initials: 'CKR' },
   { name: 'Siva Kumar Reddy',   email: 'sivakumarreddychalla@gmail.com', password: 'Moolam@1234', role: 'Member',            initials: 'SKR' },
   { name: 'Sarvesh Reddy',     email: 'challasarvesh7@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'CSR' },
   { name: 'Sivaram Reddy',     email: 'sivaram4@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'SRR' },
   { name: 'Chinnu',     email: 'challaraghuram45@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'CRR' },
-  { name: 'Yughandar Reddy',     email: 'yogi.challa@gmail.com',  password: 'Moolam@1234',  role: 'Admin / Treasurer',            initials: 'CYR' },
+  { name: 'Yughandar Reddy',     email: 'yogi.challa@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'CYR' },
   { name: 'Bharath Reddy',     email: 'bharathsudireddy5@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'SBR' },
   { name: 'Narendra Reddy',     email: 'challanarendrareddy@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'CNR' },
   { name: 'Praveen Kumar Reddy',     email: 'praveenkumar.sudireddy@gmail.com',  password: 'Moolam@1234',  role: 'Member',            initials: 'PKR' },
